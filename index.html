@@ -7,39 +7,46 @@
     <title>Week 6 Homework</title>
 
 <!-- Bootstrap link -->
-
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 <!-- CSS stylesheet -->
-
+<link rel="stylesheet" href="assets/css/style.css" class="rel">
 
 </head>
 <body>
 <!-- BS container for page content -->
-
+<div class="container">
+<h1>See ya ina GIF</h1>
 
 <!-- DIV for buttons -->
+<div id="buttons-view">
 
-
+</div> 
 <!-- END of button DIV -->
-<!-- //============================================ -->
+
 <!-- Form for adding user button -->
-
-
+<form id="GIF-form">
+    <label for="GIF-input">Add a button!</label>
+    <input type="text" id="GIF-input">
+    <br>
+    <!-- button triggers new GIF to be added -->
+    <input type="submit" id="add-GIF" value="Add a button!">
+</form> 
 <!-- END of form div -->
-<!-- //============================================ -->
+
 <!-- DIV where GIFs will be dumped -->
 
 
 <!-- END of DIV where GIFs will be dumped -->
-<!-- //============================================ -->
-
-
-<!-- external javascript link -->
-
 
 <!-- jQuery link -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+<!-- external javascript link -->
+<script src="assets/javascript/giphyAPI.js"></script>
 
-<!-- END of BS container -->
+</div> 
+                        <!-- END of BS container -->
+
 </body>
 </html>
