@@ -17,11 +17,24 @@ function displayGIF() {
         method: "GET"
     }).then(function(response){
         console.log(response);
+        console.log(response.data[0].images.original.url)
 
-        // var imageURL = response.data.image_original_url;
-    })
+// Saving the image_original_url property
+// confused on what index # to use bc dont I need to all the URL's? or do i not even need this step. was looking at the cat-button solved example - line:38
+        var imageURL = response.data[0].images.original.url;
+// Creating and storing an image tag  
+        var gifImage = $("<img>");
+
+// Setting the catImage src attribute to imageUrl
+        gifImage.attr("src", imageURL);
+        gifImage.attr("alt", "data-name");
+
+// Prepending the catImage to the images div
+        $("#images").append(gifImage);
+
+    });
 }
-displayGIF();
+// displayGIF();
 
 // Looping through topics array and dynamically creating buttons with the class and ID assigned; adding text to the buttons; appending the buttons to our button-view div
 function renderButtons(){
@@ -44,6 +57,7 @@ $("#addGIF").on("click", function(event) {
     renderButtons();
 });
 
+$(document).on("click", ".gif-btn", displayGIF);
 
 
 // Calling fxn to display initial buttons
